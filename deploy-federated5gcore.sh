@@ -59,7 +59,7 @@ PROD1_MESH_CERT=$(oc get configmap -n prod1-mesh istio-ca-root-cert -o jsonpath=
 PROD2_MESH_CERT=$(oc get configmap -n prod2-mesh istio-ca-root-cert -o jsonpath='{.data.root-cert\.pem}' | sed ':a;N;$!ba;s/\n/\\\n    /g')
 
 # to do: switch context: oc config use-context prod1-cluster
-log "Enabling federation for prod-mesh"
+log "Enabling federation for prod1-mesh"
 sed "s:{{PROD2_MESH_CERT}}:$PROD2_MESH_CERT:g" prod1-mesh/prod2-mesh-ca-root-cert.yaml | oc apply -f -
 oc apply -f site1/smp.yaml
 oc apply -f site1/iss.yaml
@@ -69,7 +69,7 @@ sed "s:{{PROD1_MESH_CERT}}:$PROD1_MESH_CERT:g" prod2-mesh/prod1-mesh-ca-root-cer
 oc apply -f site2/smp.yaml
 oc apply -f site2/ess.yaml
 
-log "Installing VirtualService for prod-mesh"
+log "Installing VirtualService for prod1-mesh"
 oc apply -n prod1-5gcore -f site1/vs-mirror-details.yaml
 
 log "INSTALLATION COMPLETE
