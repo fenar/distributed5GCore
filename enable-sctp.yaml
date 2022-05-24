@@ -3,7 +3,7 @@ kind: MachineConfig
 metadata:
   labels:
     # for 3 node cluster change role to ; worker
-    machineconfiguration.openshift.io/role: master
+    machineconfiguration.openshift.io/role: worker
   name: sctpmodule
 spec:
   config:
