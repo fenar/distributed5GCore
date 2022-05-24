@@ -57,7 +57,7 @@ spec:
           type: NodePort
           metadata:
             labels:
-              federation.maistra.io/ingress-for: prod1-mesh
+              federation.maistra.io/ingress-for: prod1-mesh.vmwspoke01.narlabs.io
           ports:
           - port: 15443
             name: tls
@@ -69,4 +69,4 @@ spec:
             nodePort: 38188
   security:
     trust:
-      domain: prod2-mesh.local
+      domain: prod2-mesh.vmwspoke02.narlabs.io
