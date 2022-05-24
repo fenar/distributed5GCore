@@ -44,12 +44,12 @@ oc wait --for condition=Ready -n prod2-mesh smmr/default --timeout 300s
 
 # to do: switch context: oc config use-context prod1-cluster
 oc project prod1-5gcore
-log "Installing Full 5gcore in prod1-mesh"
+log "Installing 5gcore in Site01"
 ./site1/deploy-prod1-5gcore.sh
 
 # to do: switch context: oc config use-context prod2-cluster
 oc project prod2-5gcore
-log "Installing AMF, UPF CNF service in prod2-mesh"
+log "Installing 5gcore in Site02"
 ./site2/deploy-prod2-5gcore.sh
 
 # to do: switch context: oc config use-context prod1-cluster
