@@ -54,15 +54,19 @@ spec:
         enabled: true
         routerMode: sni-dnat
         service:
-          type: ClusterIP
+          type: NodePort
           metadata:
             labels:
               federation.maistra.io/ingress-for: prod2-mesh
           ports:
           - port: 15443
             name: tls
+            targetPort: 15443
+            nodePort: 35443
           - port: 8188
             name: https-discovery  #note HTTPS here
+            targetPort: 8188
+            nodePort: 38188
   security:
     trust:
       domain: prod1-mesh.vmwspoke01.narlabs.io
