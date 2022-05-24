@@ -1,5 +1,11 @@
+#!/bin/bash
 
+set -e
 
+log() {
+  echo
+  echo "##### $*"
+}
 
 PROD1_MESH_CERT = echo "$(<PROD1_MESH_CERT.TXT )"
 
