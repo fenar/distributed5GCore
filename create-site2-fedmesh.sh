@@ -1,10 +1,13 @@
-PROD1_MESH_CERT=$(oc get configmap -n prod1-mesh istio-ca-root-cert -o jsonpath='{.data.root-cert\.pem}' | sed ':a;N;$!ba;s/\n/\\\n    /g')
-echo $PROD1_MESH_CERT > PROD1_MESH_CERT.TXT
+
+
+
+PROD1_MESH_CERT = echo "$(<PROD1_MESH_CERT.TXT )"
+
 
 # Enable federation for site2
-# cp site2/mesh-ca-root-cert.bak site2/prodmeshcarootcert.yaml
-# sed -e "s:<PROD1_MESH_CERT>:$PROD1_MESH_CERT:g" site2/prod1meshcarootcert.yaml
-#oc apply -f site2/prod1meshcarootcert.yaml
+cp site2/mesh-ca-root-cert.bak site2/prodmeshcarootcert.yaml
+sed -e "s:<PROD1_MESH_CERT>:$PROD1_MESH_CERT:g" site2/prod1meshcarootcert.yaml
+oc apply -f site2/prod1meshcarootcert.yaml
 oc apply -f site2/smp.yaml
 oc apply -f site2/ess.yaml
 
