@@ -7,8 +7,7 @@ log() {
   echo "##### $*"
 }
 
-PROD1_MESH_CERT = echo "$(<PROD1_MESH_CERT.TXT )"
-
+PROD1_MESH_CERT=`cat PROD1_MESH_CERT.TXT`
 
 # Enable federation for site2
 cp site2/mesh-ca-root-cert.bak site2/prodmeshcarootcert.yaml
