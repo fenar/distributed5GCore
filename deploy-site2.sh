@@ -31,8 +31,8 @@ log "Installing 5gcore in Site02"
 ./site2/deploy-prod2-5gcore.sh
 
 # "Retrieve Istio CA Root certificates"
-#PROD1_MESH_CERT=$(oc get configmap -n prod1-mesh istio-ca-root-cert -o jsonpath='{.data.root-cert\.pem}' | sed ':a;N;$!ba;s/\n/\\\n    /g')
-#echo $PROD1_MESH_CERT
+PROD1_MESH_CERT=$(oc get configmap -n prod1-mesh istio-ca-root-cert -o jsonpath='{.data.root-cert\.pem}' | sed ':a;N;$!ba;s/\n/\\\n    /g')
+echo $PROD1_MESH_CERT
 
 # Enable federation for site2
 # cp site2/mesh-ca-root-cert.bak site2/prodmeshcarootcert.yaml
