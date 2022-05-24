@@ -11,7 +11,7 @@ spec:
   ports:
     - protocol: SCTP
       port: {{ .Values.cnf.amf.sctp.port }}
-      targetPort: 38412
+      targetPort: 38414
       nodePort: {{ .Values.cnf.amf.sctp.nodeport }}
 ---
 apiVersion: v1
