@@ -27,8 +27,8 @@ k8s:
 cnf:
   amf:
     sctp:
-      nodeport: 30412
-      port: 38412
+      nodeport: 30414
+      port: 38414
     http:
       nodeport: 30080
       port: 80
