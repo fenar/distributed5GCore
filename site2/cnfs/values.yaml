@@ -33,4 +33,4 @@ cnf:
       nodeport: 30088
       port: 80
   upf:
-    nodeport: 30423
+    nodeport: 30425
