@@ -28,9 +28,9 @@ cnf:
   amf:
     sctp:
       nodeport: 30414
-      port: 38414
+      port: 38412
     http:
-      nodeport: 30080
+      nodeport: 30088
       port: 80
   upf:
     nodeport: 30423
