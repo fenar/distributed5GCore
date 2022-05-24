@@ -42,15 +42,15 @@ oc wait --for condition=Ready -n prod1-mesh smmr/default --timeout 300s
 log "Waiting for prod2-mesh installation to complete"
 oc wait --for condition=Ready -n prod2-mesh smmr/default --timeout 300s
 
-log "Installing AMF, UPF CNF service in prod2-mesh"
-oc apply -n prod2-5gcore -f site2/amf-v2-configmap.yaml
-oc apply -n prod2-5gcore -f site2/amf-v2-deploy.yaml
-oc apply -n prod2-5gcore -f site2/upf-v2-configmap.yaml
-oc apply -n prod2-5gcore -f site2/upf-v2-deploy.yaml
-
 # to do: switch context: oc config use-context prod1-cluster
+oc project prod1-5gcore
 log "Installing Full 5gcore in prod1-mesh"
 ./site1/deploy-prod1-5gcore.sh
+
+# to do: switch context: oc config use-context prod2-cluster
+oc project prod2-5gcore
+log "Installing AMF, UPF CNF service in prod2-mesh"
+./site2/deploy-prod2-5gcore.sh
 
 # to do: switch context: oc config use-context prod1-cluster
 log "Retrieving Istio CA Root certificates"
