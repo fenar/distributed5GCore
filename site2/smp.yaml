@@ -6,7 +6,7 @@ metadata:
 spec:
   remote:
     addresses:
-    - prod2-mesh-ingress.prod2-mesh.svc.cluster.local
+    - prod2-mesh-ingress.prod1-mesh.svc.cluster.local
     discoveryPort: 8188
     servicePort: 15443
   gateways:
