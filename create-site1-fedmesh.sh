@@ -10,8 +10,7 @@ log() {
 # to do: switch context: oc config use-context prod1-cluster
 #log "Retrieving Istio CA Root certificates"
 # to do: switch context: oc config use-context prod2-cluster
-PROD2_MESH_CERT=$(oc get configmap -n prod2-mesh istio-ca-root-cert -o jsonpath='{.data.root-cert\.pem}' | sed ':a;N;$!ba;s/\n/\\\n    /g')
-echo $PROD2_MESH_CERT
+PROD2_MESH_CERT = echo "$(<PROD2_MESH_CERT.TXT )"
 
 # to do: switch context: oc config use-context prod1-cluster
 log "Enabling federation for site1"
