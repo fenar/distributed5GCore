@@ -6,7 +6,7 @@ metadata:
 spec:
   remote:
     addresses:
-    - prod1-mesh-ingress.prod2-mesh.svc.vmwspoke02.narlabs.io
+    - api.vmwspoke02.narlabs.io
     discoveryPort: 38188
     servicePort: 35443
   gateways:
