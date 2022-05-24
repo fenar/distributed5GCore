@@ -10,7 +10,7 @@ log() {
 PROD1_MESH_CERT=`cat PROD1_MESH_CERT.TXT`
 
 # Enable federation for site2
-cp site2/mesh-ca-root-cert.bak site2/prodmeshcarootcert.yaml
+cp site2/mesh-ca-root-cert.bak site2/prod1meshcarootcert.yaml
 sed -e "s:<PROD1_MESH_CERT>:$PROD1_MESH_CERT:g" site2/prod1meshcarootcert.yaml
 oc apply -f site2/prod1meshcarootcert.yaml
 oc apply -f site2/smp.yaml
