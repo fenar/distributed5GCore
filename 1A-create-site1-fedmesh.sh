@@ -10,7 +10,7 @@ log() {
 # to do: switch context: oc config use-context prod1-cluster
 #log "Retrieving Istio CA Root certificates"
 # to do: switch context: oc config use-context prod2-cluster
-PROD2_MESH_CERT = echo "$(<PROD2_MESH_CERT.TXT )"
+PROD2_MESH_CERT=`cat PROD2_MESH_CERT.TXT`
 
 # to do: switch context: oc config use-context prod1-cluster
 log "Enabling federation for site1"
