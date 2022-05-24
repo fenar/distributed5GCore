@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #Author: fenar
 current_dir=$PWD
-oc create secret generic mongodb-ca --from-file=$current_dir/cnfs/ca-tls-certificates/rds-combined-ca-bundle.pem
+oc create secret generic mongodb-ca --from-file=$current_dir/site1/cnfs/ca-tls-certificates/rds-combined-ca-bundle.pem
 oc get secret
 cd cnfs
 echo "Deploying Open5G Core Production Site1"
