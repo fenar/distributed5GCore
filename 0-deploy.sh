@@ -62,7 +62,7 @@ PROD2_MESH_CERT=$(oc get configmap -n prod2-mesh istio-ca-root-cert -o jsonpath=
 log "Enabling federation for site1"
 oc project prod1-mesh
 cp site1/mesh-ca-root-cert.bak site1/prod2meshcarootcert.yaml
-sed "s//{{PROD2_MESH_CERT}}/$PROD2_MESH_CERT//g" site1/prod2meshcarootcert.yaml 
+sed -e "s/<PROD2_MESH_CERT>/$PROD2_MESH_CERT/g" -i site1/prod2meshcarootcert.yaml 
 oc apply -f site1/prod2meshcarootcert.yaml
 oc apply -f site1/smp.yaml
 oc apply -f site1/iss.yaml
