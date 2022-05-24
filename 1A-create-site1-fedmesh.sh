@@ -16,10 +16,7 @@ PROD2_MESH_CERT=`cat PROD2_MESH_CERT.TXT`
 log "Enabling federation for site1"
 oc project prod1-mesh
 cp site1/mesh-ca-root-cert.bak site1/prod2meshcarootcert.yaml
-cat site1/prod2meshcarootcert.yaml
-echo "Embed the CA Cert Pasted Above in to site1/prod2meshcarootcert.yaml"
-sed -e "s:<PROD2_MESH_CERT>:$PROD2_MESH_CERT:g" site1/prod2meshcarootcert.yaml 
-oc apply -f site1/prod2meshcarootcert.yaml
+sed "s:<PROD2_MESH_CERT>:$PROD2_MESH_CERT:g" site1/prod2meshcarootcert.yaml | oc apply -f -
 oc apply -f site1/smp.yaml
 oc apply -f site1/iss.yaml
 
