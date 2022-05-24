@@ -70,7 +70,7 @@ oc apply -f site1/iss.yaml
 log "Enabling federation for site2"
 oc project prod2-mesh
 cp site2/mesh-ca-root-cert.bak site2/prodmeshcarootcert.yaml
-sed "s//{{PROD1_MESH_CERT}}/$PROD1_MESH_CERT//g" site2/prod1meshcarootcert.yaml
+sed -e "s/<PROD1_MESH_CERT>/$PROD1_MESH_CERT/g" -i site2/prod1meshcarootcert.yaml
 oc apply -f site2/prod1meshcarootcert.yaml
 oc apply -f site2/smp.yaml
 oc apply -f site2/ess.yaml
