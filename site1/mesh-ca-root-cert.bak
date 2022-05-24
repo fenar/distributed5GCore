@@ -6,5 +6,5 @@ metadata:
   name: prod2-mesh-ca-root-cert
   namespace: prod1-mesh
 data:
-  root-cert.pem: |-
+  root-cert.pem: |
     {{PROD2_MESH_CERT}}
