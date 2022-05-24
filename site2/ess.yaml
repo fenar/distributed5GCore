@@ -10,6 +10,6 @@ spec:
       namespace: prod2-5gcore
       selector:
         matchLabels:
-          app: details
+          epc-mode: upf
       alias:
         namespace: 5gcore
