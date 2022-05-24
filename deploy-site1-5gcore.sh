@@ -28,3 +28,6 @@ oc wait --for condition=Ready -n prod1-mesh smmr/default --timeout 300s
 oc project prod1-5gcore
 log "Installing 5gcore in Site01"
 ./site1/deploy-prod1-5gcore.sh
+
+PROD1_MESH_CERT=$(oc get configmap -n prod1-mesh istio-ca-root-cert -o jsonpath='{.data.root-cert\.pem}' | sed ':a;N;$!ba;s/\n/\\\n    /g')
+echo $PROD1_MESH_CERT > PROD1_MESH_CERT.TXT
