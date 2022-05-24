@@ -1,0 +1,102 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: amf-open5gs-sctp
+  labels:
+    epc-mode: amf
+spec:
+  type: NodePort
+  selector:
+    epc-mode: amf
+  ports:
+    - protocol: SCTP
+      port: {{ .Values.cnf.amf.sctp.port }}
+      targetPort: 38412
+      nodePort: {{ .Values.cnf.amf.sctp.nodeport }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: open5gs-amf
+  labels:
+    epc-mode: amf
+spec:
+  type: NodePort
+  selector:
+    epc-mode: amf
+  ports:
+    - protocol: TCP
+      port: {{ .Values.cnf.amf.http.port }}
+      targetPort: 80
+      nodePort: {{ .Values.cnf.amf.http.nodeport }}    
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-sctp
+spec:
+  podSelector:
+    matchLabels:
+      epc-mode: amf
+  ingress:
+  - ports:
+    - protocol: SCTP
+      port: {{ .Values.cnf.amf.sctp.port }}
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-sctp-on-http
+spec:
+  podSelector:
+    matchLabels:
+      epc-mode: amf
+  ingress:
+  - ports:
+    - protocol: SCTP
+      port: 80
+---      
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: open5gs-amf-d
+  labels:
+    epc-mode: amf
+spec:
+  selector:
+    matchLabels:
+      epc-mode: amf
+  template:
+    metadata:
+      annotations:
+        cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
+        sidecar.istio.io/inject: "true"
+      labels:
+        epc-mode: amf
+    spec:    
+      containers:
+        - name: amf
+          image: "{{ .Values.open5gcore.image.repository }}:{{ .Values.open5gcore.image.oldtag }}"
+          imagePullPolicy: {{ .Values.open5gcore.image.pullPolicy }}
+          command: ["open5gs-amfd", "-c", "/open5gs/config-map/amf.yaml"]
+          volumeMounts:
+          - name: open5gs-amf-config
+            mountPath: /open5gs/config-map/amf.yaml
+            subPath: "amf.yaml"
+      volumes:
+        - name: open5gs-amf-config
+          configMap:
+            name: open5gs-amf-config
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: open5gs-amf-d
+spec:
+  maxReplicas: 3
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: open5gs-amf-d
+  targetCPUUtilizationPercentage: 80

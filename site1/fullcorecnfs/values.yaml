@@ -1,0 +1,36 @@
+# Default values for 5gcore-helm.
+
+open5gcore:
+  image:
+    repository: docker.io/efatnar/open5gcore
+    pullPolicy: IfNotPresent
+    tag: "v2.0"
+    oldtag: "v1.1"
+
+webui:
+  image:
+    repository: docker.io/efatnar/open5gcore-webui
+    pullPolicy: IfNotPresent
+    tag: "v1.1"
+
+dnn: internet  
+
+amf:
+  mcc: 208
+  mnc: 93
+  tac: 7
+
+k8s:
+  interface: eth0
+  tuninterface: ogstun
+  
+cnf:
+  amf:
+    sctp:
+      nodeport: 30412
+      port: 38412
+    http:
+      nodeport: 30080
+      port: 80
+  upf:
+    nodeport: 30423
