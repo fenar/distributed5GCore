@@ -55,8 +55,10 @@ log "Installing 5gcore in Site02"
 # to do: switch context: oc config use-context prod1-cluster
 log "Retrieving Istio CA Root certificates"
 PROD1_MESH_CERT=$(oc get configmap -n prod1-mesh istio-ca-root-cert -o jsonpath='{.data.root-cert\.pem}' | sed ':a;N;$!ba;s/\n/\\\n    /g')
+echo $PROD1_MESH_CERT
 # to do: switch context: oc config use-context prod2-cluster
 PROD2_MESH_CERT=$(oc get configmap -n prod2-mesh istio-ca-root-cert -o jsonpath='{.data.root-cert\.pem}' | sed ':a;N;$!ba;s/\n/\\\n    /g')
+echo $PROD2_MESH_CERT
 
 # to do: switch context: oc config use-context prod1-cluster
 log "Enabling federation for site1"
