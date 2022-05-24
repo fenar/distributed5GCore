@@ -65,4 +65,4 @@ spec:
             name: https-discovery  #note HTTPS here
   security:
     trust:
-      domain: prod1-mesh.local
+      domain: prod1-mesh.vmwspoke01.narlabs.io
