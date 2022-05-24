@@ -60,12 +60,16 @@ PROD2_MESH_CERT=$(oc get configmap -n prod2-mesh istio-ca-root-cert -o jsonpath=
 
 # to do: switch context: oc config use-context prod1-cluster
 log "Enabling federation for site1"
-sed "s:{{PROD2_MESH_CERT}}:$PROD2_MESH_CERT:g/" site1/prod2-mesh-ca-root-cert.yaml | oc apply -f -
+oc project prod1-5gcore
+cp site1/prod2-mesh-ca-root-cert.bak site1/prod2-mesh-ca-root-cert.yaml
+sed "s/{{PROD2_MESH_CERT}}/$PROD2_MESH_CERT/g" site1/prod2-mesh-ca-root-cert.yaml | oc apply -f -
 oc apply -f site1/smp.yaml
 oc apply -f site1/iss.yaml
 
 log "Enabling federation for site2"
-sed "s:{{PROD1_MESH_CERT}}:$PROD1_MESH_CERT:g/" site2/prod1-mesh-ca-root-cert.yaml | oc apply -f -
+oc project prod2-5gcore
+cp site2/prod2-mesh-ca-root-cert.bak site2/prod2-mesh-ca-root-cert.yaml
+sed "s/{{PROD1_MESH_CERT}}/$PROD1_MESH_CERT/g" site2/prod1-mesh-ca-root-cert.yaml | oc apply -f -
 oc apply -f site2/smp.yaml
 oc apply -f site2/ess.yaml
 
