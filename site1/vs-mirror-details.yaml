@@ -1,16 +1,16 @@
 kind: VirtualService
 apiVersion: networking.istio.io/v1alpha3
 metadata:
-  name: details
+  name: open5gs-upf
   namespace: prod1-5gcore
 spec:
   hosts:
-    - details.prod1-5gcore.svc.cluster.local
+    - open5gs-upf.prod1-5gcore.svc.cluster.local
   http:
     - mirror:
-        host: details-v2.prod1-5gcore.svc.prod2-mesh-imports.local
+        host: open5gs-upf-v2.prod1-5gcore.svc.prod2-mesh-imports.local
       route:
         - destination:
-            host: details.prod1-5gcore.svc.cluster.local
+            host: open5gs-upf.prod1-5gcore.svc.cluster.local
             subset: v1
           weight: 100
