@@ -35,7 +35,7 @@ spec:
         name: /dev/stdout        
   gateways:
     additionalEgress:
-      stage-mesh-egress:
+      prod2-mesh-egress:
         enabled: true
         requestedNetworkView:
         - network-prod1-mesh
@@ -50,7 +50,7 @@ spec:
           - port: 8188
             name: http-discovery  #note HTTP here
     additionalIngress:
-      stage-mesh-ingress:
+      prod2-mesh-ingress:
         enabled: true
         routerMode: sni-dnat
         service:
