@@ -68,7 +68,7 @@ oc apply -f site1/iss.yaml
 
 log "Enabling federation for site2"
 oc project prod2-5gcore
-cp site2/prod2-mesh-ca-root-cert.bak site2/prod2-mesh-ca-root-cert.yaml
+cp site2/prod1-mesh-ca-root-cert.bak site2/prod1-mesh-ca-root-cert.yaml
 sed "s/{{PROD1_MESH_CERT}}/$PROD1_MESH_CERT/g" site2/prod1-mesh-ca-root-cert.yaml | oc apply -f -
 oc apply -f site2/smp.yaml
 oc apply -f site2/ess.yaml
