@@ -5,7 +5,7 @@ metadata:
   name: prod1-mesh
 spec:
   cluster:
-    name: production-cluster
+    name: production1-cluster
   addons:
     grafana:
       enabled: true
