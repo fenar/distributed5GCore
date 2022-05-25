@@ -10,3 +10,6 @@ spec:
     nameSelector:
       namespace: 5gcore
       name: "*"
+      alias:
+         name: "*"-v2
+         namespace: prod1-5gcore
