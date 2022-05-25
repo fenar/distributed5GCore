@@ -22,6 +22,7 @@ Note:<br>
 ----
 
 (2) Inter-Cluster L2 Network Coupling (Submariner) with Open Cluster Management <br>
+![alt text](https://raw.githubusercontent.com/fenar/distributed5GCore/main/images/l2submarinerexpure.png)<br>
 
 ----
 
