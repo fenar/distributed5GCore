@@ -31,5 +31,4 @@ log "Installing 5gcore in Site02"
 ./site2/deploy-prod2-5gcore.sh
 
 # "Retrieve Istio CA Root certificates"
-PROD2_MESH_CERT=$(oc get configmap -n prod2-mesh istio-ca-root-cert -o jsonpath='{.data.root-cert\.pem}' | sed ':a;N;$!ba;s/\n/\\\n    /g')
-echo $PROD2_MESH_CERT  > PROD2_MESH_CERT.TXT
+oc get configmap -n prod2-mesh istio-ca-root-cert -o jsonpath='{.data.root-cert\.pem}' | sed ':a;N;$!ba;s/\n/\\\n    /g' > PROD2_MESH_CERT.TXT
