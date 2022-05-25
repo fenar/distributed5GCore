@@ -24,6 +24,11 @@ Note:<br>
 (2) Inter-Cluster L2 Network Coupling (Submariner) with Open Cluster Management <br>
 ![alt text](https://raw.githubusercontent.com/fenar/distributed5GCore/main/images/l2submarinerexpure.png)<br>
 
+ACM Provisioning of Submariner on Spoke Clusters:
+
+![alt text](https://raw.githubusercontent.com/fenar/distributed5GCore/main/images/ACM-SubMariner.png)<br>
+
+
 ----
 
 (3) Inter-Cluster Application Sticthing (Skupper) with NetObserv Operator<br>  
