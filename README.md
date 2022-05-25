@@ -6,7 +6,7 @@ This is the repo to company our forthcoming Distributed 5g Core with Service Int
 
 (1) Federated Service Mesh <br>
 
-![alt text](https://raw.githubusercontent.com/fenar/distributed5GCore/main/images/distributed5g-arch.png)<br>
+![alt text](https://raw.githubusercontent.com/fenar/distributed5GCore/main/images/distributed5g-arch2.png)<br>
 
 Working Sample-Snapshot:
 
