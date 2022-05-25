@@ -61,10 +61,10 @@ spec:
           ports:
           - port: 15443
             name: tls
-            nodePort: 35443
+            nodePort: 30443
           - port: 8188
             name: https-discovery  #note HTTPS here
-            nodePort: 38188
+            nodePort: 30188
   security:
     trust:
       domain: prod2-mesh.local
