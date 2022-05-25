@@ -7,8 +7,8 @@ spec:
   remote:
     addresses:
     - api.vmwspoke01.narlabs.io
-    discoveryPort: 38188
-    servicePort: 35443
+    discoveryPort: 30188
+    servicePort: 30443
   gateways:
     ingress:
       name: prod1-mesh-ingress
