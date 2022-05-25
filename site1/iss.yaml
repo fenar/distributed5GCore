@@ -5,7 +5,8 @@ metadata:
   namespace: prod1-mesh
 spec:
   importRules:
-    - importAsLocal: false
-      nameSelector:
-        namespace: 5gcore
-        name: "*"
+  - type: NameSelector
+    importAsLocal: false
+    nameSelector:
+      namespace: 5gcore
+      name: "*"
