@@ -7,7 +7,5 @@ spec:
   importRules:
     - importAsLocal: false
       nameSelector:
-        alias:
-          name: open5gs-upf-v2
-          namespace: prod1-5gcore
+        namespace: 5gcore
         name: "*"
