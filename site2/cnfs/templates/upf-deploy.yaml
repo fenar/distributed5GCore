@@ -4,9 +4,11 @@ metadata:
   name: open5gs-upf
   labels:
     epc-mode: upf
+    export-service: "true"
 spec:
   selector:
     epc-mode: upf
+    export-service: "true"
   ports:
     - protocol: UDP
       port: 8805
@@ -18,10 +20,12 @@ metadata:
   name: open5gs-upf-np
   labels:
     epc-mode: upf
+    export-service: "false"
 spec:
   type: NodePort
   selector:
     epc-mode: upf
+    export-service: "false"
   ports:
     - protocol: UDP
       port: 8805
