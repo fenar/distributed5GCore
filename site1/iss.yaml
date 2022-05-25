@@ -11,5 +11,5 @@ spec:
       namespace: 5gcore
       name: "*"
       alias:
-         name: "*"-v2
+         name: "*"
          namespace: prod1-5gcore
