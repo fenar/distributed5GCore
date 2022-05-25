@@ -22,7 +22,7 @@ Note:<br>
 > This setup is NOT special to onprem deployment but can also be used with hyperscalers (ex AWS). <br>
 
 
-[>>> Detailed Documentation on Service Mesh Federation Setup](https://docs.openshift.com/container-platform/4.10/service_mesh/v2x/ossm-federation.html)<br>
+[> Reference Documentation on Federated Mesh](https://docs.openshift.com/container-platform/4.10/service_mesh/v2x/ossm-federation.html)<br>
 
 ----
 
