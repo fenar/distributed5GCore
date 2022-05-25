@@ -17,6 +17,9 @@ Working Sample-Snapshot:
 
 ![alt text](https://raw.githubusercontent.com/fenar/distributed5GCore/main/images/FedMeshUPFSnapShot.png)<br>
 
+Note:<br>
+> Now that Site2's UPF being available to Site1 to assign a User Equipment (UE) for local breakout, however Site1's NRF shall be configured properly with this new UPF CNF instance so that when asked by AMF/SMF NRF can return the right UPF address for right UEs.<br>
+
 ----
 
 (2) Inter-Cluster L2 Network Coupling (Submariner) with Open Cluster Management <br>
