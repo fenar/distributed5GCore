@@ -31,4 +31,4 @@ ACM Provisioning of Submariner on Spoke Clusters:
 
 ----
 
-(3) Inter-Cluster Application Sticthing (Skupper) with NetObserv Operator<br>  
+(3) Inter-Cluster Observability Sticthing with NetObserv Operator<br>  
