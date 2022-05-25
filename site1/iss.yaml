@@ -9,7 +9,7 @@ spec:
     importAsLocal: false
     nameSelector:
       namespace: 5gcore
-      name: "*"
+      name: open5gs-upf
       alias:
-         name: "*"
+         name: open5gs-upf-localbreakout
          namespace: prod1-5gcore
