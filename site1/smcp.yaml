@@ -61,11 +61,9 @@ spec:
           ports:
           - port: 15443
             name: tls
-            targetPort: 15443
             nodePort: 35443
           - port: 8188
             name: https-discovery  #note HTTPS here
-            targetPort: 8188
             nodePort: 38188
   security:
     trust:
