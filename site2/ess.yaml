@@ -11,5 +11,6 @@ spec:
       selector:
         matchLabels:
           epc-mode: upf
+          export-service: "true"
       alias:
         namespace: 5gcore
