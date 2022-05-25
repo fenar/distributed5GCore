@@ -33,5 +33,5 @@ data:
       pfcp:
         - name: open5gs-upf
           dnn: {{ .Values.dnn }}
-        - name: open5gs-upf-v2
+        - name: open5gs-upf-site2
           dnn: {{ .Values.dnn }}
