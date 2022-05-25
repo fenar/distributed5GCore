@@ -69,4 +69,4 @@ spec:
             nodePort: 38188
   security:
     trust:
-      domain: vmwspoke01.narlabs.io
+      domain: prod1-mesh.local
