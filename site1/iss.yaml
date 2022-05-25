@@ -13,3 +13,11 @@ spec:
         name: open5gs-upf
         namespace: prod2-5gcore
       type: NameSelector
+    - importAsLocal: false
+      nameSelector:
+        alias:
+          name: open5gs-upf-np-v2
+          namespace: prod1-5gcore
+        name: open5gs-upf-np
+        namespace: prod2-5gcore
+      type: NameSelector
