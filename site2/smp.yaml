@@ -6,7 +6,7 @@ metadata:
 spec:
   remote:
     addresses:
-    - api.vmwspoke01.narlabs.io
+    - 172.27.103.95
     discoveryPort: 30188
     servicePort: 30443
   gateways:
