@@ -13,6 +13,10 @@ Prerequisite(s): <br>
 (ii) Install RH-OSSM on 5G Core Clusters so you can perform Federated Mesh among them.  <br>
 (iii) Follow number flow scripts with assumption that you exported your KUBECONFIG already in that commandline window.  <br>
 
+Working Sample-Snapshot:
+
+![alt text](https://raw.githubusercontent.com/fenar/distributed5GCore/main/images/FedMeshUPFSnapShot.png)<br>
+
 ----
 
 (2) Inter-Cluster L2 Network Coupling (Submariner) with Open Cluster Management <br>
