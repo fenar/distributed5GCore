@@ -59,9 +59,6 @@ spec:
             labels:
               federation.maistra.io/ingress-for: prod2-mesh
           ports:
-          - port: 80
-            name: http
-            nodePort: 30080
           - port: 15443
             name: tls
             nodePort: 30443
