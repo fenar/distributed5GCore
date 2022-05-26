@@ -8,7 +8,7 @@ oc adm policy add-scc-to-user privileged -z default -n open5gran
 cd 5gran
 ## gNB Section
 echo "Preparing gNB config"
-oc get services -n prod1-5gcore | grep amf-open5gs-sctp | awk '{print $3}' > amf-ip
+oc get nodes -o wide | grep worker | awk '{print $6}' > amf-ip
 echo "AMF IP:" && cat amf-ip
 cp templates/5gran-gnb-configmap.bak templates/5gran-gnb-configmap.yaml
 cp templates/5gran-ue-configmap.bak templates/5gran-ue-configmap.yaml
