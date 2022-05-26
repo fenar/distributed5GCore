@@ -8,6 +8,7 @@ spec:
   type: NodePort
   ports:
     - protocol: TCP
+      port: 80
       targetPort: 3000
       nodePort: 30088
   selector:
