@@ -7,11 +7,11 @@ spec:
     istio: ingressgateway # use Istio default gateway implementation
   servers:
   - port:
-      number: 80
+      number: 8088
       name: http
       protocol: HTTP
     hosts:
-    - "*"
+    - open5gs-webui
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
@@ -27,7 +27,7 @@ spec:
     - destination:
         host: open5gs-webui
         port:
-          number: 80
+          number: 8088
 ---
 apiVersion: v1
 kind: Service
@@ -38,7 +38,7 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-    - port: 80
+    - port: 8088
       targetPort: 3000
   selector:
     epc-mode: webui
