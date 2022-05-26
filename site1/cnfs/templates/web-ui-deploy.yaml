@@ -28,7 +28,8 @@ spec:
       port: 3001
       targetPort: 3000
   selector:
-    epc-mode: webui
+     matchLabels:
+       epc-mode: webui
 ---
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
