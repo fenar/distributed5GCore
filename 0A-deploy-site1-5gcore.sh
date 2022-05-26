@@ -30,3 +30,5 @@ log "Installing 5gcore in Site01"
 ./site1/deploy-prod1-5gcore.sh
 
 oc get configmap -n prod1-mesh istio-ca-root-cert -o jsonpath='{.data.root-cert\.pem}' | sed ':a;N;$!ba;s/\n/\\\n    /g' > PROD1_MESH_CERT.TXT
+
+oc apply -f site1/open5gcorewebui-expose.yaml
