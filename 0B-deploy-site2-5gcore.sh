@@ -32,3 +32,5 @@ log "Installing 5gcore in Site02"
 
 # "Retrieve Istio CA Root certificates"
 oc get configmap -n prod2-mesh istio-ca-root-cert -o jsonpath='{.data.root-cert\.pem}' | sed ':a;N;$!ba;s/\n/\\\n    /g' > PROD2_MESH_CERT.TXT
+
+oc apply -f site2/open5gcorewebui-expose.yaml
