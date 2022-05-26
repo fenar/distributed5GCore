@@ -5,11 +5,13 @@ metadata:
   namespace: prod1-5gcore
 spec:
   host: open5gs-webui-prod1-5gcore.apps.vmwspoke01.narlabs.io 
-  port:
-    targetPort: 3000
   to:
     kind: Service
     name: open5gs-webui
+  tls:
+    termination: reencrypt
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
 ---
 apiVersion: v1
 kind: Service
