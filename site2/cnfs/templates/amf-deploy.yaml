@@ -20,6 +20,7 @@ metadata:
   name: open5gs-amf
   labels:
     epc-mode: amf
+    export-service: "true"
 spec:
   type: NodePort
   selector:
