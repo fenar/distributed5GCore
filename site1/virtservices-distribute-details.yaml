@@ -12,5 +12,5 @@ spec:
             host: open5gs-upf.prod1-5gcore.svc.cluster.local
           weight: 60
         - destination:
-            host: open5gs-upf-v2.prod1-5gcore.svc.prod2-mesh-imports.local
+            host: open5gs-nrf-v2.prod1-5gcore.svc.prod2-mesh-imports.local
           weight: 40
