@@ -11,7 +11,7 @@ spec:
       selector:
         matchLabels:
           epc-mode: upf
-          export-service: true
+          export-service: "true"
       alias:
         namespace: 5gcore
   - type: LabelSelector
