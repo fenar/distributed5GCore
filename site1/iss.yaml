@@ -11,5 +11,5 @@ spec:
           name: open5gs-upf-site2
           namespace: prod1-5gcore
         name: open5gs-upf
-        namespace: prod2-5gcore
+        namespace: prod1-5gcore
       type: NameSelector
