@@ -5,6 +5,8 @@ metadata:
   labels:
     epc-mode: upf
     export-service: "true"
+    service: upf
+    version: v2
 spec:
   selector:
     epc-mode: upf
