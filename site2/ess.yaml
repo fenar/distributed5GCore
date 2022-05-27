@@ -19,7 +19,7 @@ spec:
       namespace: prod2-5gcore
       selector:
         matchLabels:
-          epc-mode: smf
+          epc-mode: amf
       alias:
         namespace: 5gcore
   - type: LabelSelector
@@ -27,6 +27,6 @@ spec:
       namespace: prod2-5gcore
       selector:
         matchLabels:
-          epc-mode: nrf
+          epc-mode: smf
       alias:
         namespace: 5gcore
