@@ -9,5 +9,15 @@ spec:
       nameSelector:
         alias:
           namespace: prod1-5gcore
+          name: open5gs-upf-remote
+        name: open5gs-upf  
+        namespace: 5gcore
+      type: NameSelector
+    - importAsLocal: false
+      nameSelector:
+        alias:
+          namespace: prod1-5gcore
+          name: open5gs-nrf-remote
+        name: open5gs-nrf
         namespace: 5gcore
       type: NameSelector
