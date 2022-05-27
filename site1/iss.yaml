@@ -5,9 +5,11 @@ metadata:
   namespace: prod1-mesh
 spec:
   importRules:
-    - type: NameSelector
-      importAsLocal: false
+    - importAsLocal: false
       nameSelector:
-        namespace: 5gcore
         alias:
+          name: open5gs-upf-v2
           namespace: prod1-5gcore
+        name: open5gs-upf
+        namespace: prod2-5gcore
+      type: NameSelector
