@@ -12,7 +12,7 @@ spec:
             host: open5gs-upf.prod1-5gcore.svc.cluster.local
           weight: 60
         - destination:
-            host: open5gs-upf.prod1-5gcore.svc.prod2-mesh-imports.local
+            host: open5gs-upf.prod2-5gcore.svc.prod1-mesh-exports.local
           weight: 40
 ---
 kind: VirtualService
@@ -29,5 +29,5 @@ spec:
             host: open5gs-nrf.prod1-5gcore.svc.cluster.local
           weight: 60
         - destination:
-            host: open5gs-nrf.prod1-5gcore.svc.prod2-mesh-imports.local
+            host: open5gs-nrf.prod2-5gcore.svc.prod1-mesh-exports.local
           weight: 40
