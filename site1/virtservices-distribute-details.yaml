@@ -10,10 +10,10 @@ spec:
     - route:
         - destination:
             host: open5gs-upf.prod1-5gcore.svc.cluster.local
-          weight: 60
+          weight: 50
         - destination:
             host: open5gs-upf.prod1-5gcore.svc.prod2-mesh-imports.local
-          weight: 40
+          weight: 50
 ---
 kind: VirtualService
 apiVersion: networking.istio.io/v1alpha3
@@ -27,24 +27,24 @@ spec:
     - route:
         - destination:
             host: open5gs-smf.prod1-5gcore.svc.cluster.local
-          weight: 60
+          weight: 50
         - destination:
             host: open5gs-smf.prod1-5gcore.svc.prod2-mesh-imports.local
-          weight: 40
+          weight: 50
 ---
 kind: VirtualService
 apiVersion: networking.istio.io/v1alpha3
 metadata:
-  name: open5gs-nrf
+  name: open5gs-amf
   namespace: prod1-5gcore
 spec:
   hosts:
-    - open5gs-nrf.prod1-5gcore.svc.cluster.local
+    - open5gs-amf.prod1-5gcore.svc.cluster.local
   http:
     - route:
         - destination:
-            host: open5gs-nrf.prod1-5gcore.svc.cluster.local
-          weight: 60
+            host: open5gs-amf.prod1-5gcore.svc.cluster.local
+          weight: 50
         - destination:
-            host: open5gs-nrf.prod1-5gcore.svc.prod2-mesh-imports.local
-          weight: 40
+            host: open5gs-amf.prod1-5gcore.svc.prod2-mesh-imports.local
+          weight: 50
