@@ -21,7 +21,7 @@ oc apply -f site1/smp.yaml
 oc apply -f site1/iss.yaml
 
 log "Installing VirtualService for site1"
-oc apply -n prod1-5gcore -f site1/vs-mirror-details.yaml
+oc apply -n prod1-5gcore -f site1/virtservices-distribute-details.yaml
 
 log "INSTALLATION COMPLETE
 #Run the following command in the prod-mesh to check the connection status:
