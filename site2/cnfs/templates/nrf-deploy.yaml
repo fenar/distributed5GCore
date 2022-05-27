@@ -4,6 +4,8 @@ metadata:
   name: open5gs-nrf
   labels:
     epc-mode: nrf
+    service: nrf
+    version: v2
 spec:
   selector:
     epc-mode: nrf
