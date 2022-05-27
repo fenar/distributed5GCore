@@ -8,8 +8,6 @@ spec:
     - importAsLocal: false
       nameSelector:
         alias:
-          name: open5gs-upf-site2
           namespace: prod1-5gcore
-        name: open5gs-upf
-        namespace: prod1-5gcore
+        namespace: 5gcore
       type: NameSelector
