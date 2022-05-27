@@ -5,12 +5,12 @@ metadata:
   namespace: prod1-5gcore
 spec:
   hosts:
-    - open5gs-nrf.prod1-5gcore.svc.cluster.local
+    - open5gs-upf.prod1-5gcore.svc.cluster.local
   http:
     - route:
         - destination:
-            host: open5gs-nrf.prod1-5gcore.svc.cluster.local
+            host: open5gs-upf.prod1-5gcore.svc.cluster.local
           weight: 60
         - destination:
-            host: open5gs-nrf-remote.prod1-5gcore.svc.prod2-mesh-imports.local
+            host: open5gs-upf-remote.prod1-5gcore.svc.prod2-mesh-imports.local
           weight: 40
