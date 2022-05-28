@@ -14,20 +14,3 @@ spec:
           export-service: "true"
       alias:
         namespace: 5gcore
-  - type: LabelSelector
-    labelSelector:
-      namespace: prod2-5gcore
-      selector:
-        matchLabels:
-          epc-mode: amf
-          export-service: "true"
-      alias:
-        namespace: 5gcore
-  - type: LabelSelector
-    labelSelector:
-      namespace: prod2-5gcore
-      selector:
-        matchLabels:
-          epc-mode: smf
-      alias:
-        namespace: 5gcore
