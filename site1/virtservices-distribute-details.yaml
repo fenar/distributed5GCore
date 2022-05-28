@@ -7,44 +7,9 @@ spec:
   hosts:
     - open5gs-upf.prod1-5gcore.svc.cluster.local
   http:
-    - route:
+    - mirror:
+        host: open5gs-upf-remote.prod1-5gcore.svc.prod2-mesh-imports.local
+      route:
         - destination:
             host: open5gs-upf.prod1-5gcore.svc.cluster.local
-          weight: 50
-        - destination:
-            host: open5gs-upf.prod1-5gcore.svc.prod2-mesh-imports.local
-          weight: 50
----
-kind: VirtualService
-apiVersion: networking.istio.io/v1alpha3
-metadata:
-  name: open5gs-smf
-  namespace: prod1-5gcore
-spec:
-  hosts:
-    - open5gs-smf.prod1-5gcore.svc.cluster.local
-  http:
-    - route:
-        - destination:
-            host: open5gs-smf.prod1-5gcore.svc.cluster.local
-          weight: 50
-        - destination:
-            host: open5gs-smf.prod1-5gcore.svc.prod2-mesh-imports.local
-          weight: 50
----
-kind: VirtualService
-apiVersion: networking.istio.io/v1alpha3
-metadata:
-  name: open5gs-amf
-  namespace: prod1-5gcore
-spec:
-  hosts:
-    - open5gs-amf.prod1-5gcore.svc.cluster.local
-  http:
-    - route:
-        - destination:
-            host: open5gs-amf.prod1-5gcore.svc.cluster.local
-          weight: 50
-        - destination:
-            host: open5gs-amf.prod1-5gcore.svc.prod2-mesh-imports.local
-          weight: 50
+          weight: 100
