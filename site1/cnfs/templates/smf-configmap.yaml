@@ -32,6 +32,8 @@ data:
     upf:
       pfcp:
         - name: open5gs-upf
+          tac: {{ .Values.amf.tac }}
           dnn: {{ .Values.dnn }}
         - name: open5gs-upf-remote
+          tac: {{ .Values.amf.tac-remote }}
           dnn: {{ .Values.dnn }}
