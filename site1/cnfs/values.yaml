@@ -19,6 +19,7 @@ amf:
   mcc: 208
   mnc: 93
   tac: 7
+  tac-remote: [3,5,8]
 
 k8s:
   interface: eth0
