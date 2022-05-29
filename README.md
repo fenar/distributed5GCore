@@ -12,10 +12,6 @@ Working Sample-Snapshot:
 
 ![alt text](https://raw.githubusercontent.com/fenar/distributed5GCore/main/images/FedMeshUPFSnapShot.png)<br>
 
-Note:<br>
-> Now that Site2's UPF being available to Site1 to assign a User Equipment (UE) for local breakout, however Site1's NRF shall be configured properly with this new UPF CNF instance so that when asked by AMF/SMF NRF can return the right UPF address for right UEs.<br>
-> This setup is NOT special to onprem deployment but can also be used with hyperscalers (ex AWS). <br>
-
 
 [> Reference Documentation on Federated Mesh](https://docs.openshift.com/container-platform/4.10/service_mesh/v2x/ossm-federation.html)<br>
 
