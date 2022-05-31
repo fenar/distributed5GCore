@@ -38,4 +38,4 @@ data:
           dnn: {{ .Values.dnn }}
         - name: open5gs-upf-remote
           tac: {{ .Values.amf.tacremote }}
-          dnn: {{ .Values.dnnremote }}
+          dnn: {{ .Values.dnn }}
