@@ -24,7 +24,7 @@ data:
          - addr: 10.45.0.1/16
            dnn: {{ .Values.dnn }}
          - addr: 10.47.0.1/16
-           dnn: {{ .Values.dnn2 }}
+           dnn: {{ .Values.dnnremote }}
         dns:
           - 8.8.8.8
         mtu: 1400
@@ -38,4 +38,4 @@ data:
           dnn: {{ .Values.dnn }}
         - name: open5gs-upf-remote
           tac: {{ .Values.amf.tacremote }}
-          dnn: {{ .Values.dnn2 }}
+          dnn: {{ .Values.dnnremote }}
