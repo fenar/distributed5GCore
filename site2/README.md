@@ -1,1 +1,1 @@
-#Site2 has only remote site CNFs; AMF/UPF etc
+#Site2 has only remote site CNFs; UPF 
