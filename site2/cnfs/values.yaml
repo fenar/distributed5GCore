@@ -15,8 +15,6 @@ webui:
 
 dnn: internet
 
-dnnremote: internet2
-
 amf:
   mcc: 208
   mnc: 93
