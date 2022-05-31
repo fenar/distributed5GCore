@@ -23,7 +23,7 @@ data:
           - plmn_id:
               mcc: {{ .Values.amf.mcc }}
               mnc: {{ .Values.amf.mnc }}
-            tacall: {{ .Values.amf.tac }}
+            tac-all: {{ .Values.amf.tac }}
         plmn_support:
         - plmn_id:
             mcc: {{ .Values.amf.mcc }}
