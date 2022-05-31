@@ -5,7 +5,7 @@ metadata:
   namespace: prod1-mesh
 spec:
   importRules:
-    - importAsLocal: false
+    - importAsLocal: true
       nameSelector:
         alias:
           name: open5gs-upf-remote
