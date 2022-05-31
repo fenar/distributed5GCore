@@ -9,6 +9,8 @@ open5gcore:
 
 dnn: internet
 
+dnnremote: internet2
+
 k8s:
   interface: eth0
   tuninterface: ogstun
