@@ -33,4 +33,4 @@ data:
       pfcp:
         - name: open5gs-upf
           tac: {{ .Values.amf.tacremote }}
-          dnn: {{ .Values.dnn2 }}
+          dnn: {{ .Values.dnn }}
