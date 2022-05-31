@@ -6,5 +6,6 @@ cd 5gran
 rm amf-ip
 echo "Removing UERANSIM Deployment"
 rm templates/5gran-gnb-configmap.yaml
+rm templates/5gran-ue-configmap.yaml
 helm uninstall 5gran-prod2
 echo "Bye"
