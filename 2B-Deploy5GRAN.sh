@@ -14,5 +14,5 @@ cp templates/5gran-gnb-configmap.bak2 templates/5gran-gnb-configmap.yaml
 cp templates/5gran-ue-configmap.bak2 templates/5gran-ue-configmap.yaml
 sed -e "s/<put-your-amf-service-ip-here>/$(<amf-ip sed -e 's/[\&/]/\\&/g' -e 's/$/\\n/' | tr -d '\n')/g" -i templates/5gran-gnb-configmap.yaml
 echo "gNB Config:" && cat templates/5gran-gnb-configmap.yaml
-helm install -f values.yaml 5gran2 ./
+helm install -f values.yaml 5gran-prod2 ./
 echo "Enjoy The 5GRAN!"
