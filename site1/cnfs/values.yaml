@@ -38,3 +38,5 @@ cnf:
       port: 80
   upf:
     nodeport: 30423
+    nodeportremote: 30425
+    
