@@ -6,6 +6,8 @@ oc adm policy add-scc-to-user hostaccess -z default -n open5gran
 oc adm policy add-scc-to-user hostmount-anyuid -z default -n open5gran
 oc adm policy add-scc-to-user privileged -z default -n open5gran
 cd 5gran
+rm templates/5gran-gnb-configmap.yaml
+rm templates/5gran-ue-configmap.yaml
 ## gNB Section
 echo "Preparing gNB config"
 oc get nodes -o wide | grep worker | awk '{print $6}' | head -1 > amf-ip
