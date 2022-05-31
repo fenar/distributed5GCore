@@ -18,9 +18,9 @@ dnn: internet
 amf:
   mcc: 208
   mnc: 93
-  tac-all: [3,5,7,9]
-  tac-local: 7
-  tac-remote: [3,5,9]
+  tacall: [3,5,7,9]
+  taclocal: 7
+  tacremote: [3,5,9]
 
 k8s:
   interface: eth0
