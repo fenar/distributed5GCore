@@ -7,7 +7,7 @@ open5gcore:
     tag: "v2.0"
     oldtag: "v1.1"
 
-dnn: internet  
+dnnremote: internet2
 
 k8s:
   interface: eth0
