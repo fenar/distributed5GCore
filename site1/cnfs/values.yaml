@@ -13,7 +13,9 @@ webui:
     pullPolicy: IfNotPresent
     tag: "v1.1"
 
-dnn: internet  
+dnn: internet
+
+dnnremote: internet2
 
 amf:
   mcc: 208
