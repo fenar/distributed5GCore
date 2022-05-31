@@ -7,6 +7,10 @@ metadata:
 spec:
   selector:
     name: debug-app
+  ports:
+    - protocol: TCP
+      port: 88  
+      targetPort: 88
 ---
 apiVersion: apps/v1
 kind: Deployment
