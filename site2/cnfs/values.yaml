@@ -9,11 +9,6 @@ open5gcore:
 
 dnn: internet  
 
-amf:
-  mcc: 208
-  mnc: 93
-  tac: 7
-
 k8s:
   interface: eth0
   tuninterface: ogstun
