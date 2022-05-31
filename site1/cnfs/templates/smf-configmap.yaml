@@ -37,6 +37,6 @@ data:
           tac: {{ .Values.amf.taclocal }}
           dnn: {{ .Values.dnn }}
         - name: open5gs-upf-remote.prod1-5gcore.svc.prod2-mesh-imports.local
-          port: {{ .Values.cnf.upf.nodeportremote }}
+          #port: {{ .Values.cnf.upf.nodeportremote }}
           tac: {{ .Values.amf.tacremote }}
           dnn: {{ .Values.dnnremote }}
