@@ -21,8 +21,6 @@ data:
         gtpu:
           dev: {{ .Values.k8s.tuninterface }} 
         subnet:
-         - addr: 10.45.0.1/16
-           dnn: {{ .Values.dnn }}
          - addr: 10.47.0.1/16
            dnn: {{ .Values.dnnremote }}
         dns:
@@ -34,9 +32,5 @@ data:
     upf:
       pfcp:
         - name: open5gs-upf
-          tac: {{ .Values.amf.taclocal }}
-          dnn: {{ .Values.dnn }}
-        - name: open5gs-upf-remote.prod1-5gcore.svc.prod2-mesh-imports.local
-          port: {{ .Values.cnf.upf.nodeportremote }}
           tac: {{ .Values.amf.tacremote }}
-          dnn: {{ .Values.dnnremote }}
+          dnn: {{ .Values.dnn2 }}
