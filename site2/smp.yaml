@@ -6,7 +6,7 @@ metadata:
 spec:
   remote:
     addresses:
-    - 172.27.103.95
+    - 172.27.103.34
     discoveryPort: 30188
     servicePort: 30443
   gateways:
