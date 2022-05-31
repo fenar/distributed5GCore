@@ -8,7 +8,6 @@ metadata:
 spec:
   selector:
     epc-mode: upf
-    export-service: "true"
   ports:
     - protocol: UDP
       port: 8805
