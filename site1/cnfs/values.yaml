@@ -18,8 +18,8 @@ dnn: internet
 amf:
   mcc: 208
   mnc: 93
-  tacall: [3,5,7,9]
-  tac: 7
+  tac-all: [3,5,7,9]
+  tac-local: 7
   tac-remote: [3,5,9]
 
 k8s:
