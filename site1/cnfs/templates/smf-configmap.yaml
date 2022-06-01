@@ -38,6 +38,5 @@ data:
           dnn: {{ .Values.dnn }}
         - name: open5gs-upf-remote
           port: 30425
-          tac: 3
-          tac: 7
+          tac: {{ .Values.amf.tacremote }}
           dnn: {{ .Values.dnnremote }}
