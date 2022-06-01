@@ -21,18 +21,18 @@ cnf:
   dnn: "internet"
   dnnremote: "internet"
   amf:
-    mcc: 208
-    mnc: 93
-    tacall: [3, 5, 7, 9]
-    taclocal: [7, 9]
-    tacremote: [3, 5]
+    mcc: "208"
+    mnc: "93"
+    tacall: "{3, 5, 7, 9}"
+    taclocal: "{7, 9}"
+    tacremote: "{3, 5}"
     sctp:
-      nodeport: 30412
-      port: 38412
+      nodeport: "30412"
+      port: "38412"
     http:
-      nodeport: 30080
-      port: 80
+      nodeport: "30080"
+      port: "80"
   upf:
-    nodeport: 30423
-    nodeportremote: 30425
+    nodeport: "30423"
+    nodeportremote: "30425"
     
