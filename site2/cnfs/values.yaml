@@ -9,7 +9,7 @@ open5gcore:
 
 dnn: internet
 
-dnnremote: internet2
+dnnremote: internet
 
 k8s:
   interface: eth0
