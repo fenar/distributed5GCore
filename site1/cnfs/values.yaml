@@ -23,9 +23,9 @@ cnf:
   amf:
     mcc: 208
     mnc: 93
-    tacall: {3,5,7,9}
-    taclocal: {7,9}
-    tacremote: {3,5}
+    tacall: [3, 5, 7, 9]
+    taclocal: [7, 9]
+    tacremote: [3, 5]
     sctp:
       nodeport: 30412
       port: 38412
