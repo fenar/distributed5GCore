@@ -22,9 +22,9 @@ data:
           dev: {{ .Values.k8s.tuninterface }} 
         subnet:
          - addr: 10.45.0.1/16
-           dnn: {{ .Values.dnn }}
+           dnn: {{ .Values.cnf.dnn }}
          - addr: 10.47.0.1/16
-           dnn: {{ .Values.dnnremote }}
+           dnn: {{ .Values.cnf.dnnremote }}
         dns:
           - 8.8.8.8
         mtu: 1400
@@ -34,9 +34,9 @@ data:
     upf:
       pfcp:
         - name: open5gs-upf
-          tac: {{ .Values.amf.taclocal }}
-          dnn: {{ .Values.dnn }}
+          tac: {{ .Values.cnf.amf.taclocal }}
+          dnn: {{ .Values.cnf.dnn }}
         - name: open5gs-upf-remote.prod1-5gcore.svc.prod2-mesh-imports.local
-          port: {{ .Values.upf.nodeportremote }}
-          tac: {{ .Values.amf.tacremote }}
-          dnn: {{ .Values.dnnremote }}
+          port: {{ .Values.cnf.upf.nodeportremote }}
+          tac: {{ .Values.cnf.amf.tacremote }}
+          dnn: {{ .Values.cnf.dnnremote }}
