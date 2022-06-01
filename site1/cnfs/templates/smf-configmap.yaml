@@ -37,5 +37,7 @@ data:
           tac: {{ .Values.amf.taclocal }}
           dnn: {{ .Values.dnn }}
         - name: open5gs-upf-remote
-          tac: {{ .Values.amf.tacremote }}
+          port: 30425
+          tac: 3
+          tac: 7
           dnn: {{ .Values.dnnremote }}
