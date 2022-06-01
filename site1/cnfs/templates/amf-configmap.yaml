@@ -14,20 +14,20 @@ data:
           dev: {{ .Values.k8s.interface }}
         guami:
           - plmn_id:
-              mcc: {{ .Values.amf.mcc }}
-              mnc: {{ .Values.amf.mnc }}
+              mcc: {{ .Values.cnf.amf.mcc }}
+              mnc: {{ .Values.cnf.amf.mnc }}
             amf_id:
               region: 2
               set: 1
         tai:
           - plmn_id:
-              mcc: {{ .Values.amf.mcc }}
-              mnc: {{ .Values.amf.mnc }}
+              mcc: {{ .Values.cnf.amf.mcc }}
+              mnc: {{ .Values.cnf.amf.mnc }}
             tac: {{ .Values.amf.tacall }}
         plmn_support:
         - plmn_id:
-            mcc: {{ .Values.amf.mcc }}
-            mnc: {{ .Values.amf.mnc }}
+            mcc: {{ .Values.cnf.amf.mcc }}
+            mnc: {{ .Values.cnf.amf.mnc }}
           s_nssai:
           - sst: 1
         security:
