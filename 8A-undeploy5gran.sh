@@ -3,7 +3,7 @@
 echo -e "Wiping UERANSIM....\n"
 echo
 cd 5gran
-rm amf-ip
+rm prod1-worker-ip
 echo "Removing UERANSIM Deployment"
 rm templates/5gran-gnb-configmap.yaml
 rm templates/5gran-ue-configmap.yaml
