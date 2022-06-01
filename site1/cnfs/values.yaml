@@ -18,8 +18,8 @@ k8s:
   tuninterface: ogstun
   
 cnf:
-  dnn: internet
-  dnnremote: internet
+  dnn: "internet"
+  dnnremote: "internet"
   amf:
     mcc: 208
     mnc: 93
