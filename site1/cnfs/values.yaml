@@ -20,9 +20,9 @@ dnnremote: internet2
 amf:
   mcc: 208
   mnc: 93
-  tacall: [3,5,7,9]
-  taclocal: [7,9]
-  tacremote: [3,5]
+  tacall: {3,5,7,9}
+  taclocal: {7,9}
+  tacremote: {3,5}
 
 k8s:
   interface: eth0
